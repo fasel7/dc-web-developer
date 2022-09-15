@@ -1,5 +1,6 @@
 body {
   text-align: center;
+  background-color: bisque;
 }
 
 h1 {
@@ -20,4 +21,10 @@ a {
 
 a:hover {
     text-decoration: underline;
+}
+
+img {
+    height: 150px;
+    width: auto;
+    border-radius: 75px;
 }
