@@ -4,10 +4,20 @@ body {
 
 h1 {
   color: red;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Lato', 'Fira sans', Arial, Helvetica, sans-serif;
+  font-weight: bold;
 }
 
 p {
   color: green;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(172, 127, 255);
+}
+
+a:hover {
+    text-decoration: underline;
 }
