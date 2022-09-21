@@ -2,7 +2,6 @@ body {
   text-align: center;
   font-family: sans-serif;
   background-color: rgb(255, 215, 142);
-  font-size: 16px;
 }
 
 img {
@@ -17,13 +16,13 @@ span {
   color: orange;
 }
 
-.haupt {
+.container {
   width: 800px;
-  height: 950px;
+  height: 1000px;
   background-color: beige;
   margin-top: 100px;
   border: 5px solid orange;
-  border-radius: 1%;
+  border-radius: 10px;
   text-align: center;
 }
 
@@ -31,10 +30,11 @@ div {
   width: 700px;
   height: 650px;
   background-color: orange;
-  margin: 30px auto;
-  border-radius: 2%;
+  margin: 30px auto 48px auto;
+  border-radius: 10px;
   text-align: left;
   padding: 10px;
+  font-size: 18px;
 }
 
 ul {
@@ -45,12 +45,11 @@ li {
   margin: 10px 0;
   list-style: none;
   padding-left: 10px;
-  margin-bottom: 5px;
+  font-size: 16px;
 }
 
 .important {
   color: green;
-  /* list-style: square; */
   border-left: 5px solid green;
 }
 
@@ -66,9 +65,19 @@ main a {
   padding: 15px;
   background-color: orange;
   color: black;
+  font-size: 20px;
 }
 
-#Homepage {
+footer a {
   text-decoration: none;
   color: orange;
+}
+
+footer > p {
+  color: gray;
+}
+
+.container > p {
+  color: gray;
+  font-size: 25px;
 }
