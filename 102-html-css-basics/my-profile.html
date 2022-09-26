@@ -16,7 +16,7 @@
     <main>
       <h1 id="profile">Mein Profil</h1>
       <h3>Business-Card</h3>
-      <div><img src="Profile-Pic.png" alt="Foto von mir" /><b>Julian Visintainer</b></div>
+      <div id="profile-box"><img src="Profile-Pic.png" alt="Foto von mir" /><b>Julian Visintainer</b></div>
       <h2 id="skills">Skills</h2>
       <h3>HTML</h3>
       <div class="skills-bar">
@@ -31,6 +31,18 @@
         <div id="bar3"><span class="label">2%</span></div>
       </div>
       <h2 id="contact">Kontakt</h2>
+      <div id="container">
+        <div id="contact-box">
+          <form action="" id="form1">
+            <input name="name" type="text" class="feedback-input" placeholder="Name" />
+            <input name="email" type="text" class="feedback-input" placeholder="Email" />
+            <input name="telephone" type="text" class="feedback-input" placeholder="Telefonnummer" />
+
+            <input type="submit" id="button" value="SUBMIT" />
+          </form>
+        </div>
+        <div id="comment"><textarea name="text" class="feedback-comment" placeholder="Kommentar" form="form1"></textarea></div>
+      </div>
     </main>
   </body>
 </html>

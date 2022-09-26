@@ -35,7 +35,7 @@ main {
   margin-top: 100px;
 }
 
-div {
+#profile-box {
   height: 300px;
   width: 300px;
   border: 1px solid black;
@@ -111,4 +111,53 @@ span {
 
 .label:hover {
   opacity: 1;
+}
+
+/* Kontaktformular */
+
+#container {
+  text-align: center;
+}
+
+#contact-box {
+  display: inline-block;
+}
+
+.feedback-input {
+  display: block;
+  margin: 15px;
+  height: 30px;
+  text-align: center;
+  background-color: rgb(250, 202, 143);
+  border-radius: 15px;
+  border: 3px solid rgba(128, 128, 128, 0.774);
+}
+
+#comment {
+  display: inline-block;
+}
+
+.feedback-comment {
+  margin: 15px;
+  min-height: 150px;
+  min-width: 280px;
+  text-align: center;
+  background-color: rgb(250, 202, 143);
+  border-radius: 15px;
+  border: 3px solid rgba(128, 128, 128, 0.774);
+}
+
+#button {
+  height: 30px;
+  width: 160px;
+  text-align: center;
+  background-color: rgb(231, 99, 99);
+  border-radius: 5px;
+  border: 3px solid rgba(128, 128, 128, 0.774);
+  color: white;
+}
+
+#button:hover {
+  background-color: red;
+  font-weight: bold;
 }
