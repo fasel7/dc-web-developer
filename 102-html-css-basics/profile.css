@@ -70,6 +70,25 @@ div > img {
   display: block;
 }
 
+.opc {
+  margin-top: 10px;
+  display: block;
+}
+
+.mail {
+  opacity: 0;
+  margin-top: 10px;
+  display: block;
+}
+
+#profile-box:hover .opc {
+  display: none;
+}
+
+#profile-box:hover .mail {
+  opacity: 1;
+}
+
 #bar1 {
   height: 27px;
   width: 15%;
@@ -140,7 +159,9 @@ span {
 .feedback-comment {
   margin: 15px;
   min-height: 150px;
+  max-height: 150px;
   min-width: 280px;
+  max-width: 1600px;
   text-align: center;
   background-color: rgb(250, 202, 143);
   border-radius: 15px;
