@@ -24,6 +24,7 @@ nav > a {
   padding: 5px;
   color: black;
   float: right;
+  border-left: 4px solid transparent;
 }
 
 a:hover {
@@ -85,12 +86,12 @@ div > img {
 
 #profile-box:hover .opc {
   opacity: 0;
-  transition-duration: 2s;
+  transition-duration: 1s;
 }
 
 #profile-box:hover .mail {
   opacity: 1;
-  transition-duration: 2s;
+  transition-duration: 1s;
 }
 
 #bar1 {
@@ -186,4 +187,35 @@ span {
 #button:hover {
   background-color: red;
   font-weight: bold;
+}
+
+/* Fotobox */
+
+#pictures {
+  padding-top: 70px;
+}
+
+#pic-box {
+  display: grid;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 5px;
+  background-color: #2196f3;
+  padding: 5px;
+  margin: 50px;
+}
+
+#pic-box > div {
+  background-color: rgba(255, 255, 255, 0.8);
+  text-align: center;
+  padding: 20px 0;
+  font-size: 30px;
+}
+
+.asdf {
+  grid-area: 1 / 1 / span 2 / span 3;
+}
+
+#pic-box > div > img {
+  height: 200px;
+  width: auto;
 }
