@@ -1,0 +1,81 @@
+main > .header {
+  display: flex;
+  background-color: #d6dce6;
+  height: 70vh;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.container {
+  flex-grow: 1;
+  padding: 50px;
+}
+
+#watch-header {
+  width: 30%;
+  flex-shrink: 0;
+  object-fit: cover;
+  height: 100%;
+}
+
+main > .services {
+  display: flex;
+  gap: 20px;
+  padding: 50px;
+  background-color: #00003f;
+  border-radius: 60px 60px 0 0;
+  color: white;
+}
+
+.services .service {
+  background-color: #1b1b53;
+  flex: 1;
+  padding: 30px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.services .service img {
+  width: 50px;
+  align-self: flex-start;
+}
+
+.services .service p {
+  margin-bottom: 0;
+}
+
+.reviews {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  padding: 100px 50px;
+}
+
+.reviews > * {
+  flex: 1;
+}
+
+.reviews .review {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px 50px;
+  align-items: flex-start;
+}
+
+.reviews .review .review-box {
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 25px;
+  padding: 20px;
+  flex-basis: calc(50% - 25px);
+}
+
+.reviews .review .review-box:nth-child(2n) {
+  margin-top: 25px;
+}
+
+.reviews .review .review-box p:last-of-type {
+  margin-bottom: 0;
+}

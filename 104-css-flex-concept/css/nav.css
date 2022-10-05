@@ -1,0 +1,11 @@
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 50px;
+  border-bottom: 5px solid #00003f;
+}
+
+div > a > img {
+  width: 300px;
+}
