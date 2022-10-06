@@ -6,6 +6,15 @@ nav {
   border-bottom: 5px solid #00003f;
 }
 
-div > a > img {
+div a img {
   width: 300px;
+}
+
+@media only screen and (max-width: 768px) {
+  nav {
+    flex-direction: column;
+  }
+  div a img {
+    display: block;
+  }
 }
