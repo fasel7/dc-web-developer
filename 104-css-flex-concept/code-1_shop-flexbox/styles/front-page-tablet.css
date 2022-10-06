@@ -1,0 +1,35 @@
+.header-section {
+  height: auto;
+}
+
+.header-image {
+  display: none;
+}
+
+.header-content {
+  width: auto;
+}
+
+.facts {
+  justify-content: center;
+}
+
+.facts .fact {
+  flex-basis: calc(50% - 10px);
+  flex-grow: 0;
+}
+
+.testimonial-block {
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  text-align: center;
+}
+
+.testimonial-block .testimonial-content {
+  align-items: center;
+}
+
+.team-wrapper {
+  flex-wrap: wrap;
+}

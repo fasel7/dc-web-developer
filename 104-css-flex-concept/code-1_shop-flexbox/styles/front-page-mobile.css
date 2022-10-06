@@ -1,0 +1,26 @@
+.facts {
+  flex-direction: column;
+}
+
+.facts .fact {
+  flex-grow: 1;
+}
+
+.testimonial-block .testimonials {
+  flex-direction: column;
+  min-width: auto;
+}
+
+.testimonial {
+  width: auto;
+}
+
+.testimonial:nth-child(even) {
+  top: 0;
+}
+
+.cta {
+  flex-direction: column;
+  gap: 30px;
+  text-align: center;
+}
