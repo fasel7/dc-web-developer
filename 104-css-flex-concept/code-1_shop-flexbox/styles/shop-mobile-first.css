@@ -29,6 +29,7 @@ main > div {
   width: 100%;
   padding: 20px;
   background-color: rgb(206, 202, 202);
+  border-radius: 5px;
 }
 
 .product-img {
