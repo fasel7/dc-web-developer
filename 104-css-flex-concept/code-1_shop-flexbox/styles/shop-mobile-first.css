@@ -1,20 +1,32 @@
 main > div {
   display: flex;
-  margin-top: 20px;
-  padding: 20px;
+  /* padding: 20px; */
+  margin: 20px 50px;
+  justify-content: space-between;
+}
+
+.selectors {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.selectors .selector {
+  display: flex;
+  flex-direction: column;
 }
 
 .products {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin: 20px;
+  margin: 50px;
 }
 
 .products .product {
   display: flex;
   flex-direction: column;
-  /* width: 100%; */
+  width: 100%;
   padding: 20px;
   background-color: rgb(206, 202, 202);
 }
@@ -26,22 +38,25 @@ main > div {
 }
 
 @media screen and (min-width: 576px) {
+  .selectors {
+    flex-direction: row;
+  }
   .products {
     flex-direction: row;
     flex-wrap: wrap;
   }
-  .product {
+  .products .product {
     flex-basis: calc(50% - 10px);
   }
 }
 
 @media screen and (min-width: 992px) {
-  .product {
-    flex-basis: calc(33.33333% - 20px);
+  .products .product {
+    flex-basis: calc(33.33333% - 15px);
+    flex-grow: 1;
   }
-  .product:first-child,
-  .product:last-child {
-    width: 50%;
+  .products .product:first-child {
+    flex-basis: calc(50% - 10px);
     flex-grow: 0;
   }
 }

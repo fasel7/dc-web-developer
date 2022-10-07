@@ -6,7 +6,7 @@ header {
   border-bottom: 5px solid #00003f;
 }
 
-#logo {
+.logo {
   width: 300px;
   display: block;
 }
@@ -41,13 +41,14 @@ nav ul li:hover {
 }
 
 @media screen and (max-width: 576px) {
-  #logo {
+  .logo {
     display: none;
   }
   #logo-mobile {
     display: block;
   }
   header {
-    justify-content: space-around;
+    justify-content: flex-start;
+    gap: 20px;
   }
 }
