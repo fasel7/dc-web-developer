@@ -1,0 +1,81 @@
+body {
+  font-size: 3em;
+}
+
+.container {
+  display: grid;
+  margin: 50px 100px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "eins eins zwei zwei"
+    "eins eins drei vier"
+    "eins eins fünf fünf"
+    "eins eins fünf fünf";
+}
+
+.container > div {
+  background-color: grey;
+  border: 1px solid black;
+}
+
+.item-1 {
+  grid-area: eins;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: auto auto;
+  justify-items: center;
+  row-gap: 10px;
+}
+
+.item-2 {
+  grid-area: zwei;
+}
+
+.item-3 {
+  grid-area: drei;
+}
+
+.item-4 {
+  grid-area: vier;
+}
+
+.item-5 {
+  grid-area: fünf;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  /* grid-template-rows: auto auto; */
+  justify-items: center;
+  align-items: end;
+}
+
+.about-me {
+  background-color: white;
+  grid-column: 2 / 3;
+  grid-row: 2;
+  height: 300px;
+  margin-bottom: 50px;
+}
+
+.circle {
+  grid-column: 2 / 3;
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-top: 50px;
+}
+
+.circles {
+  background-color: white;
+  width: 100px;
+  height: 100px;
+  border-radius: 50px;
+  margin-bottom: 10px;
+}
+
+p {
+  position: relative;
+  bottom: 130px;
+  right: 60px;
+}
