@@ -1,0 +1,101 @@
+body {
+  box-sizing: border-box;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  gap: 10px;
+  justify-content: center;
+}
+
+.item-1 {
+  display: grid;
+  border: 5px solid black;
+  height: 190px;
+  width: 190px;
+  align-items: center;
+  justify-items: center;
+}
+
+.item-top {
+  grid-template-columns: 1fr;
+  grid-template-rows: 80% 20%;
+}
+
+.item-bottom {
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 80%;
+}
+
+.item-left {
+  grid-template-columns: 80% 20%;
+  grid-template-rows: 1fr;
+}
+
+.item-right {
+  grid-template-columns: 20% 80%;
+  grid-template-rows: 1fr;
+}
+
+.item-1 p {
+  font-size: 2.5em;
+}
+
+.item-1 .left-numbers {
+  transform: rotate(90deg);
+}
+
+.item-1 .right-numbers {
+  transform: rotate(270deg);
+}
+
+.item-1 .top-numbers {
+  transform: rotate(180deg);
+}
+
+.item-1 .left-top-corner {
+  transform: rotate(135deg);
+}
+
+.item-1 .right-top-corner {
+  transform: rotate(225deg);
+}
+
+.item-1 .left-bottom-corner {
+  transform: rotate(45deg);
+}
+
+.item-1 .right-bottom-corner {
+  transform: rotate(-45deg);
+}
+
+.item-top span {
+  background-color: green;
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+}
+
+.item-bottom span {
+  background-color: rgb(255, 58, 124);
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+  order: -1;
+}
+
+.item-left span {
+  background-color: blue;
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+}
+
+.item-right span {
+  background-color: red;
+  height: 100%;
+  width: 100%;
+  border: 5px solid black;
+  order: -1;
+}
