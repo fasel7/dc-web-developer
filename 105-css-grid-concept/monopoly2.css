@@ -1,0 +1,127 @@
+body {
+  box-sizing: border-box;
+}
+
+p {
+  font-size: 3rem;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(5, 200px);
+  grid-template-rows: repeat(5, 200px);
+  justify-content: center;
+  border: 5px solid black;
+  align-content: center;
+  gap: 10px;
+  padding: 100px 0;
+}
+
+.container > div {
+  display: grid;
+  border: 5px solid black;
+  height: 190px;
+  justify-content: center;
+  align-content: center;
+}
+
+.container div:nth-child(6) {
+  grid-column: 5;
+  grid-row: 2;
+}
+
+.container div:nth-child(7) {
+  grid-column: 5;
+  grid-row: 3;
+}
+
+.container div:nth-child(8) {
+  grid-column: 5;
+  grid-row: 4;
+}
+
+.container div:nth-child(9) {
+  grid-column: 5;
+  grid-row: 5;
+}
+
+.container div:nth-child(10) {
+  grid-column: 4;
+  grid-row: 5;
+}
+
+.container div:nth-child(11) {
+  grid-column: 3;
+  grid-row: 5;
+}
+
+.container div:nth-child(12) {
+  grid-column: 2;
+  grid-row: 5;
+}
+
+.container div:nth-child(13) {
+  grid-column: 1;
+  grid-row: 5;
+}
+
+.container div:nth-child(14) {
+  grid-column: 1;
+  grid-row: 4;
+}
+
+.container div:nth-child(15) {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(1) p {
+  transform: rotate(135deg);
+  padding: 0;
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(5) p {
+  transform: rotate(225deg);
+  padding: 0;
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(9) p {
+  transform: rotate(315deg);
+  padding: 0;
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(13) p {
+  transform: rotate(45deg);
+  padding: 0;
+}
+
+input[type="checkbox"]:checked ~ .container div p {
+  padding-top: 40px;
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(2),
+input[type="checkbox"]:checked ~ .container div:nth-child(3),
+input[type="checkbox"]:checked ~ .container div:nth-child(4) {
+  transform: rotate(180deg);
+  background: linear-gradient(to bottom, green 0px 35px, black 35px 40px, white 40px);
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(6),
+input[type="checkbox"]:checked ~ .container div:nth-child(7),
+input[type="checkbox"]:checked ~ .container div:nth-child(8) {
+  transform: rotate(270deg);
+  background: linear-gradient(to bottom, orange 0px 35px, black 35px 40px, white 40px);
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(10),
+input[type="checkbox"]:checked ~ .container div:nth-child(11),
+input[type="checkbox"]:checked ~ .container div:nth-child(12) {
+  background: linear-gradient(to bottom, pink 0px 35px, black 35px 40px, white 40px);
+}
+
+input[type="checkbox"]:checked ~ .container div:nth-child(14),
+input[type="checkbox"]:checked ~ .container div:nth-child(15),
+input[type="checkbox"]:checked ~ .container div:nth-child(16) {
+  transform: rotate(90deg);
+  background: linear-gradient(to bottom, yellow 0px 35px, black 35px 40px, white 40px);
+}
