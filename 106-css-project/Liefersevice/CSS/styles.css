@@ -61,3 +61,32 @@ small,
 .text_small {
   font-size: 0.833rem;
 }
+
+.container {
+  background-color: white;
+  padding: 5px;
+  border-radius: 35px;
+  display: flex;
+  width: fit-content;
+}
+
+.search {
+  background-color: grey;
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.search:active {
+  background-color: red;
+}
+
+.adress {
+  border: 0;
+  border-radius: 20px;
+}
+
+.adress:focus {
+  outline: none;
+}
