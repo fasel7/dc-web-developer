@@ -9,55 +9,139 @@
   </head>
   <body>
     <nav>
-      <div class="logo">
-        <img src="./Bilder/food-location.svg" alt="Logo" />
-        <h2>FOODLLY</h2>
+      <div class="container nav">
+        <div class="logo">
+          <img src="./Bilder/food-location.svg" alt="Logo" />
+          <h2>FOODLLY</h2>
+        </div>
+        <ul class="menu-bar">
+          <li><a href="">App für Kunden</a></li>
+          <li><a href="">Für Unternehmen</a></li>
+          <li><a href="">Über uns</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
+        <input type="checkbox" id="hamburg" />
+        <label for="hamburg" class="hamburger">
+          <span class="line"></span>
+          <span class="line"></span>
+          <span class="line"></span>
+        </label>
+        <ul class="menu-bar-mobile">
+          <li><a href="">App für Kunden</a></li>
+          <li><a href="">Für Unternehmen</a></li>
+          <li><a href="">Über uns</a></li>
+          <li><a href="">Kontakt</a></li>
+        </ul>
       </div>
-      <ul class="menu-bar hidden">
-        <li><a href="">App für Kunden</a></li>
-        <li><a href="">Für Unternehmen</a></li>
-        <li><a href="">Über uns</a></li>
-        <li><a href="">Kontakt</a></li>
-      </ul>
-      <input type="checkbox" id="hamburg" />
-      <label for="hamburg" class="hamburger">
-        <span class="line"></span>
-        <span class="line"></span>
-        <span class="line"></span>
-      </label>
-      <ul class="menu-bar hidden">
-        <li><a href="">App für Kunden</a></li>
-        <li><a href="">Für Unternehmen</a></li>
-        <li><a href="">Über uns</a></li>
-        <li><a href="">Kontakt</a></li>
-      </ul>
     </nav>
     <header>
       <img class="header-pic" src="./Bilder/header-picture.jpg" alt="Tisch mit Essen" />
-      <div class="search-box">
+      <div class="search-box container">
         <h3>Hungrig?</h3>
         <p>Jetzt Restaurant in deiner Nähe finden und bestellen</p>
-        <div class="adress-box">
-          <input class="adress" type="text" placeholder="Adresse eingeben" /><input class="search" type="button" value="Suchen" />
-        </div>
+        <div class="adress-box"><input class="adress" type="text" placeholder="Adresse eingeben" /><input class="search" type="button" value="Suchen" /></div>
       </div>
     </header>
-    <section class="container">
-      <h3>Wie funktionierts?</h3>
-      <div class="how-to">
-        <div>
-          <img src="./Bilder/GPS.svg" alt="GPS" />
-          <h5>Gib deinen Standort an</h5>
+    <section>
+      <div class="container">
+        <h3>Wie funktionierts?</h3>
+        <div class="how-to">
+          <div>
+            <img src="./Bilder/Standort.svg" alt="GPS" />
+            <h5>Gib deinen Standort an</h5>
+          </div>
+          <img class="arrow" src="./Bilder/down-arrow.svg" alt="Pfeil" />
+          <div>
+            <img src="./Bilder/Burger.svg" alt="Hamburger" />
+            <h5>Restaurant und Essen auswählen</h5>
+          </div>
+          <img class="arrow" src="./Bilder/down-arrow.svg" alt="Pfeil" />
+          <div>
+            <img src="./Bilder/erhalten.svg" alt="Lieferung" />
+            <h5>Bezahlen und Essen erhalten</h5>
+          </div>
         </div>
-        <img src="./Bilder/down-arrow.svg" alt="Pfeil" />
-        <div>
-          <img src="./Bilder/Burger.svg" alt="Hamburger" />
-          <h5>Restaurant und Essen auswählen</h5>
+      </div>
+    </section>
+    <section class="bg-dark">
+      <div class="container facts">
+        <div class="fact">
+          <span>>20.000.000</span>
+          <p>Bestellungen</p>
         </div>
-        <img src="./Bilder/down-arrow.svg" alt="Pfeil" />
+        <div class="fact">
+          <span>>20.000.000</span>
+          <p>Bestellungen</p>
+        </div>
+        <div class="fact hidden-mobile">
+          <span>>20.000.000</span>
+          <p>Bestellungen</p>
+        </div>
+        <div class="fact hidden-mobile">
+          <span>>20.000.000</span>
+          <p>Bestellungen</p>
+        </div>
+        <div class="fact hidden-mobile">
+          <span>>20.000.000</span>
+          <p>Bestellungen</p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container download-app">
         <div>
-          <img src="./Bilder/erhalten.svg" alt="Lieferung" />
-          <h5>Bezahlen und Essen erhalten</h5>
+          <h3>App herunterladen</h3>
+          <p>Noch leichter und schneller bestellen!</p>
+        </div>
+        <div class="asdf">
+          <div class="app-advantages">
+            <h2>headline</h2>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consequatur qui aliquam exercitationem dicta est. Voluptates recusandae soluta, natus nemo
+            accusamus quam, hic, vero ipsa laborum molestiae voluptatem repellat aliquam libero?
+          </div>
+          <div class="download-button">
+            <a href=""><img src="./Bilder/googleplay.svg" alt="Download button" /></a><a href=""><img src="./Bilder/appstore.svg" alt="Download button" /></a>
+          </div>
+          <img id="app-mobile" src="./Bilder/app-mobile.png" alt="" />
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container">
+        <h3>App Features</h3>
+        <div class="features">
+          <div class="features-card">
+            <h5>Foodtracker</h5>
+            <img src="./Bilder/GPS.svg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quasi distinctio esse sunt dolorem! Asperiores, doloremque ipsam quas hic
+              neque maxime. Non cupiditate illo possimus voluptas iure commodi et molestias.
+            </p>
+          </div>
+          <div class="features-card">
+            <h5>Foodtracker</h5>
+            <img src="./Bilder/GPS.svg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quasi distinctio esse sunt dolorem! Asperiores, doloremque ipsam quas hic
+              neque maxime. Non cupiditate illo possimus voluptas iure commodi et molestias.
+            </p>
+          </div>
+          <div class="features-card">
+            <h5>Foodtracker</h5>
+            <img src="./Bilder/GPS.svg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quasi distinctio esse sunt dolorem! Asperiores, doloremque ipsam quas hic
+              neque maxime. Non cupiditate illo possimus voluptas iure commodi et molestias.
+            </p>
+          </div>
+          <div class="features-card">
+            <h5>Foodtracker</h5>
+            <img src="./Bilder/GPS.svg" alt="" />
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum quasi distinctio esse sunt dolorem! Asperiores, doloremque ipsam quas hic
+              neque maxime. Non cupiditate illo possimus voluptas iure commodi et molestias.
+            </p>
+          </div>
         </div>
       </div>
     </section>
