@@ -77,36 +77,6 @@ a {
   color: var(--color-primary);
 }
 
-.adress-box {
-  background-color: white;
-  padding: 5px;
-  border-radius: 35px;
-  display: flex;
-  justify-content: space-between;
-  width: 90%;
-}
-
-.search {
-  background-color: grey;
-  color: white;
-  border: 0;
-  padding: 10px;
-  border-radius: 20px;
-}
-
-.search:active {
-  background-color: red;
-}
-
-.adress {
-  border: 0;
-  border-radius: 20px;
-}
-
-.adress:focus {
-  outline: none;
-}
-
 nav {
   display: flex;
   justify-content: space-between;
@@ -131,7 +101,69 @@ nav {
   display: flex;
   gap: 20px;
   list-style: none;
+}
+
+label.hamburger {
+  display: block;
+  width: 55px;
+  height: 40px;
+  position: relative;
+  z-index: 2;
+}
+
+input#hamburg {
   display: none;
+}
+
+.line {
+  position: absolute;
+  left: 10px;
+  height: 4px;
+  width: 45px;
+  background: #fff;
+  border-radius: 2px;
+  display: block;
+  transition: 0.5s;
+  transform-origin: center;
+  z-index: 2;
+}
+
+.line:nth-child(1) {
+  top: 7px;
+}
+.line:nth-child(2) {
+  top: 18px;
+}
+.line:nth-child(3) {
+  top: 29px;
+}
+
+#hamburg:checked ~ ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #274001;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  z-index: 1;
+}
+
+#hamburg:checked + .hamburger .line:nth-child(1) {
+  transform: translateY(11px) rotate(-45deg);
+}
+
+#hamburg:checked + .hamburger .line:nth-child(2) {
+  opacity: 0;
+}
+
+#hamburg:checked + .hamburger .line:nth-child(3) {
+  transform: translateY(-11px) rotate(45deg);
 }
 
 .header-pic {
@@ -156,12 +188,48 @@ header {
   color: var(--color-primary);
 }
 
+.search-box > p {
+  text-align: center;
+}
+
+.adress-box {
+  background-color: white;
+  padding: 5px;
+  border-radius: 35px;
+  display: flex;
+  justify-content: space-between;
+  width: 90%;
+}
+
+.search {
+  background-color: grey;
+  color: white;
+  border: 0;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+.search:active {
+  background-color: red;
+}
+
+.adress {
+  border: 0;
+  border-radius: 20px;
+  width: 100%;
+  padding-left: 10px;
+}
+
+.adress:focus {
+  outline: none;
+}
+
 .container {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .how-to {
@@ -183,4 +251,8 @@ header {
 
 .container img {
   height: 45px;
+}
+
+.hidden {
+  display: none;
 }
