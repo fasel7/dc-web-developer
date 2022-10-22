@@ -1,0 +1,26 @@
+@use "abstracts/variables" as v;
+
+body {
+  color: v.$primary-color;
+}
+
+@each $name, $colors in v.$colors {
+  .#{$name} {
+    color: $colors;
+    border: 1px solid $colors;
+    background-color: lighten($colors, $amount: 30%);
+    display: inline;
+  }
+}
+
+@mixin hot-border($width: 5px, $style: dotted, $color: hotpink) {
+  border: $width $style $color;
+}
+
+h1 {
+  @include hot-border();
+}
+
+h2 {
+  @include hot-border(15px, solid, red);
+}
