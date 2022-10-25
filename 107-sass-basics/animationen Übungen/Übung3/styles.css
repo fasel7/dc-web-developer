@@ -1,0 +1,55 @@
+body {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+
+.container {
+  min-width: 400px;
+  min-height: 400px;
+  background-color: lightgray;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  transition: transform 1s ease-in-out;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.container:hover > .red {
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container:hover > .green {
+  transform: rotate(-90deg);
+  transform-origin: top right;
+}
+
+.container:hover > .yellow {
+  transform: rotate(-90deg);
+  transform-origin: bottom left;
+}
+
+.container:hover > .blue {
+  transform: rotate(90deg);
+  transform-origin: bottom right;
+}

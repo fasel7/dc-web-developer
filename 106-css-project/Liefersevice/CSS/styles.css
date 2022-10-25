@@ -122,11 +122,36 @@ section {
   height: 50px;
 }
 
-.menu-bar,
-.menu-bar-mobile {
+.menu-bar {
   display: none;
   gap: 20px;
   list-style: none;
+}
+
+.menu-bar-mobile {
+  position: relative;
+  display: none;
+  opacity: 0;
+  background-color: #2740012d;
+  gap: 20px;
+  list-style: none;
+  transition: background-color 5s;
+}
+
+.links {
+  --s: 0.1em; /* the thickness of the line */
+  --c: var(--color-primary); /* the color */
+
+  /* color: #0000; */
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0) calc(100% - var(--_p, 0%)) / 200% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s;
+}
+.links:hover {
+  --_p: 100%;
 }
 
 label.hamburger {
@@ -164,7 +189,7 @@ input#hamburg {
   top: 29px;
 }
 
-#hamburg:checked ~ ul {
+#hamburg:checked ~ .menu-bar-mobile {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -178,6 +203,7 @@ input#hamburg {
   margin: 0;
   padding: 0;
   z-index: 1;
+  opacity: 1;
 }
 
 #hamburg:checked + .hamburger .line:nth-child(1) {
@@ -196,6 +222,19 @@ input#hamburg {
   width: 100%;
   min-height: 300px;
   object-fit: cover;
+  animation: fadeIn 0.5s ease-in both;
+  z-index: -1;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translate3d(0, -20%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 header {
@@ -214,10 +253,34 @@ header {
   border-radius: 15px;
   padding: var(--padding-mobile);
   color: var(--color-primary);
+  z-index: -1;
 }
 
 .search-box > p {
   text-align: center;
+}
+
+.search-box {
+  animation-name: flip-in-horizontal;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: none;
+
+  /* shorthand
+		animation: flip-in-horizontal 1.2s ease 0s 1 normal none;*/
+}
+@keyframes flip-in-horizontal {
+  0% {
+    transform: rotateX(-80deg);
+    opacity: 0;
+  }
+  100% {
+    transform: rotateX(0);
+    opacity: 1;
+  }
 }
 
 .adress-box {
