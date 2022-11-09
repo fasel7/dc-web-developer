@@ -23,9 +23,9 @@ console.log(user.firstName);
 // let 2ndName =
 // let first%Name =
 // let first-name =
-let first_Name = 1;
-let_firstName = 2;
-let $firstName = 2;
+// let first_Name = 1;
+// let_firstName = 2;
+// let $firstName = 2;
 
 //Funktionen//
 
