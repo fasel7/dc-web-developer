@@ -151,3 +151,70 @@ console.log(rps("scissors", "paper"));
 console.log(rps("paper", "scissors"));
 console.log(rps("paper", "rock"));
 console.log(rps("paper", "paper"));
+
+function calculateStudentGrade(StudentName, num1) {
+  if (num1 < 0) {
+    return "Error";
+  } else if (num1 < 60) {
+    return StudentName + " Grade = F";
+  } else if (num1 < 70) {
+    return StudentName + " Grade = D";
+  } else if (num1 < 80) {
+    return StudentName + " Grade = C";
+  } else if (num1 < 90) {
+    return StudentName + " Grade = B";
+  } else if (num1 <= 100) {
+    return StudentName + " Grade = A";
+  }
+}
+
+console.log(calculateStudentGrade("Mark", 90));
+
+// Schleifen
+
+for (let i = 0; i < 7; i++) {
+  console.log("Hello JS");
+}
+
+var i = 0;
+while (i < 7) {
+  i++;
+  console.log("Hello JS");
+}
+
+// ---------
+
+let noten = [70, 45, 89, 33, 25];
+let summe = 0;
+
+for (let i = 0; i < noten.length; i++) {
+  summe += noten[i];
+}
+let durchschnitt = Math.floor(summe / noten.length);
+console.log(durchschnitt);
+
+function generateFibonacci(number) {
+  let fibonacci = [];
+  fibonacci[0] = 0;
+  fibonacci[1] = 1;
+
+  for (var i = 2; i < number; i++) {
+    fibonacci[i] = fibonacci[i - 2] + fibonacci[i - 1];
+  }
+  return fibonacci;
+}
+console.log(generateFibonacci(11));
+
+let differentNumbers = [70, 45, 89, 33, 25, 10, 20];
+let geradeZahlen = [];
+
+function evenNumbers() {
+  for (let i = 0; i < differentNumbers.length; i++) {
+    if (differentNumbers[i] % 2 == 0) {
+      geradeZahlen.push(differentNumbers[i]);
+    }
+  }
+  return geradeZahlen;
+}
+
+console.log(evenNumbers());
