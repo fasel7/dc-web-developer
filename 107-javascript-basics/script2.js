@@ -218,3 +218,138 @@ function evenNumbers() {
 }
 
 console.log(evenNumbers());
+
+function errorCodeAnswer(code) {
+  if (code == 400) {
+    console.log("Bad Request");
+  } else if (code == 402) {
+    console.log("Payment Required");
+  } else if (code == 404) {
+    console.log("Not Found");
+  } else if (code == 409) {
+    console.log("Conflict");
+  } else if (code == 414) {
+    console.log("URI Too Long");
+  } else if (code == 425) {
+    console.log("Too Early");
+  } else if (code == 429) {
+    console.log("Too Many Requests");
+  } else {
+    console.log("Läuft");
+  }
+}
+
+errorCodeAnswer(429);
+
+let errorCode = 429;
+
+switch (errorCode) {
+  case 400:
+    document.write("Bad Request");
+    break;
+  case 402:
+    document.write("Payment Required");
+    break;
+  case 404:
+    document.write("Not Found");
+    break;
+  case 409:
+    document.write("Conflict");
+    break;
+  case 414:
+    document.write("URI Too Long");
+    break;
+  case 425:
+    document.write("Too Early");
+    break;
+  case 429:
+    document.write("Too Many Requests");
+    break;
+
+  default:
+    document.write("Läuft");
+}
+
+let differentNumArray = [12, 55, 43, 10];
+
+function multiplicateArray() {
+  let sum = 1;
+  for (let i = 0; i < differentNumArray.length; i++) {
+    sum *= differentNumArray[i];
+  }
+  return sum;
+}
+
+console.log(multiplicateArray());
+
+function gcd_two_numbers(x, y) {
+  if (typeof x !== "number" || typeof y !== "number") return false;
+  x = Math.abs(x);
+  y = Math.abs(y);
+  while (y) {
+    var t = y;
+    y = x % y;
+    x = t;
+  }
+  return x;
+}
+console.log(gcd_two_numbers(12, 13));
+console.log(gcd_two_numbers(9, 3));
+
+function minArray() {
+  let minNumber = differentNumArray[0];
+  for (let i = 0; i < differentNumArray.length; i++) {
+    if (differentNumArray[i] < minNumber) {
+      minNumber = differentNumArray[i];
+    }
+  }
+  return minNumber;
+}
+console.log(minArray());
+
+function bubblesortArray(arr) {
+  let temp = 0;
+  for (let i = 0; i < differentNumArray.length; i++) {
+    for (let j = 1; j < differentNumArray.length; j++) {
+      if (differentNumArray[j - 1] > differentNumArray[i]) {
+        temp = differentNumArray[j - 1];
+        differentNumArray[j - 1] = differentNumArray[i];
+        differentNumArray[i] = temp;
+      }
+    }
+  }
+  console.log(differentNumArray);
+}
+bubblesortArray();
+
+// let differentNumArray = [12, 55, 43, 10];
+
+let NumArray = [10, 3, 6, 8, 12, 3, 2, 15];
+function searchSameNumber() {
+  for (let i = 0; i < NumArray.length; i++) {
+    for (let j = i + 1; j < NumArray.length; j++) {
+      if (NumArray[j] === NumArray[i]) {
+        console.log(NumArray[i] + "=" + NumArray[j]);
+      }
+    }
+  }
+}
+
+searchSameNumber(NumArray);
+
+let zahl = 5;
+let speicher = 1;
+
+for (let i = zahl; i > 1; i--) {
+  speicher = speicher * i;
+}
+
+console.log(speicher);
+
+let palindromName = "Anna";
+
+for (let i = 0; i < palindromName.length / 2; i++) {
+  if (palindromName[i] === palindromName[palindromName.length - i - 1]);
+}
+
+console.log(palindromName.length);
