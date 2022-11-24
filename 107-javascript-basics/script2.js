@@ -353,3 +353,109 @@ for (let i = 0; i < palindromName.length / 2; i++) {
 }
 
 console.log(palindromName.length);
+
+//
+console.log("---------------------------------------------");
+
+const obj = {
+  firstName: "Max",
+  lastName: "Mustermann",
+  age: 30,
+  listProperties() {
+    const arrayOfKeys = Object.keys(this);
+    arrayOfKeys.forEach((key) => console.log(key, typeof this[key]));
+  },
+};
+console.log(obj);
+console.log(obj.firstName);
+console.log(obj["firstName"]);
+
+obj.firstName = "Josef";
+obj.lastName = "Mayer";
+obj.hobbies = ["Golf", "Tennis", "Surfen"];
+obj.hobbies.push("Tanzen");
+obj.hobbies.shift();
+delete obj.age;
+console.log(obj.hasOwnProperty("age"));
+
+// for in Schleife
+for (let key in obj) {
+  console.log(obj[key], typeof obj[key]);
+}
+
+function listProperties(object) {
+  const arrayOfKeys = Object.keys(object);
+  arrayOfKeys.forEach((key) => console.log(key, typeof object[key]));
+}
+listProperties(obj);
+
+obj.listProperties(obj);
+// const keys = Object.keys(obj);
+// keys.forEach((key) => console.log(obj[key]));
+console.log("---------------------------------------------");
+
+// let kurstitel = "Web Developer";
+// let kursbeschreibung = "adsfsgdf";
+// let trainer = ["Daniel", "Martin"];
+// let themengebiete = ["HTML", "CSS", "Javascript"];
+// let studenten = ["Julian", "Marco", "Ebrahim"];
+
+const digitalCampusKurs = {
+  titel: "Web Developer",
+  beschreibung: "adsfsgdf",
+  trainer: ["Daniel", "Martin"],
+  themengebiete: [
+    { titel: "HTML", einheiten: 20, trainer: "Martin" },
+    { titel: "CSS", einheiten: 30, trainer: "Daniel" },
+    { titel: "Javascript", einheiten: 10000, trainer: "Martin" },
+  ],
+  studenten: ["Julian", "Marco", "Ebrahim", "Martin", "Pius"],
+  enrollStudent() {
+    let person = prompt("Please enter your name");
+    if (person) {
+      if (digitalCampusKurs.studenten.length <= 4) {
+        this.studenten.push(person);
+      } else alert("Zu viele Teilnehmer");
+    } else alert("Bitte Name eingeben");
+  },
+  info() {
+    console.log(this.titel, this.trainer, this.beschreibung);
+  },
+  addThemengebiet(titel, einheiten, trainer) {
+    this.themengebiete.push({ titel, einheiten, trainer });
+  },
+};
+console.log(digitalCampusKurs);
+// function info(object) {
+//   console.log(digitalCampusKurs.kurstitel);
+//   console.log(object);
+// }
+// info(digitalCampusKurs);
+
+// function enrollStudent(StudentName) {
+//   digitalCampusKurs.studenten.push(StudentName);
+// }
+// enrollStudent("Regina");
+
+digitalCampusKurs.info();
+digitalCampusKurs.enrollStudent();
+console.log(digitalCampusKurs);
+digitalCampusKurs.addThemengebiet("SQL", 100, "josef");
+console.log(digitalCampusKurs);
+// Exercise 5
+// function addThemengebiet(titel, einheiten, trainer) {
+//   digitalCampusKurs.themengebiete.push({ titel, einheiten, trainer });
+// }
+
+// Exercise 6
+function sumEinheiten() {
+  let summe = 0;
+  for (let i = 0; i < digitalCampusKurs.themengebiete.length; i++) {
+    summe += digitalCampusKurs.themengebiete[i].einheiten;
+  }
+  return summe;
+}
+console.log("Einheiten Gesamt: " + sumEinheiten() + " Stunden");
+
+// Exercise 7
+console.log(digitalCampusKurs.studenten.length);
