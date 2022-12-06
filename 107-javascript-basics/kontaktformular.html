@@ -5,17 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
-
     <title>Kontakformular</title>
   </head>
   <body>
     <h1>Kontaktformular</h1>
     <form>
       <input name="name" type="text" class="feedback-input" id="name-input" placeholder="Name" />
-      <input name="email" type="text" class="feedback-input" id="email-input" placeholder="Email" />
+      <input name="email" type="text" class="feedback-input" id="email-input" placeholder="Email" autocomplete="on" />
       <textarea name="text" class="feedback-input" id="comment-input" placeholder="Comment"></textarea>
+      <button id="submit">Submit</button>
     </form>
-    <button id="submit">Submit</button>
   </body>
   <script src="kontaktformularScript.js"></script>
 </html>
