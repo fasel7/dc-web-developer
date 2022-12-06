@@ -61,3 +61,18 @@ function checkComment() {
     return true;
   }
 }
+
+//---------------------------------------------------------
+let followMe = document.getElementById("followMe");
+followMe.addEventListener("mousemove", moveDiv);
+followMe.addEventListener("click", () => (stopfunction = true));
+followMe.addEventListener("mouseover", () => (stopfunction = false));
+
+let stopfunction = false;
+
+function moveDiv(event) {
+  if (stopfunction) return;
+  // console.log(event.clientY + "px");
+  followMe.style.top = event.clientY - "50" + "px";
+  followMe.style.left = event.clientX - "50" + "px";
+}
