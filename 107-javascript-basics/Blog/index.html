@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+    <title>Blog</title>
+  </head>
+  <body>
+    <section id="insert-post">
+      <h1>Post hinzufügen</h1>
+      <form>
+        <label>Titel:</label><br />
+        <input type="text" id="title" class="input-box" /><br />
+        <label for="textfield">Text: 0/140</label><br />
+        <textarea maxlength="140" name="textfield" id="textfield"></textarea><br />
+        <label for="homepage">Link:</label> <br />
+        <input type="url" id="homepage" class="input-box" name="homepage" /> <br />
+        <label for="category">Kategorie:</label> <br />
+        <select id="category" class="input-box">
+          <option value="HTML">HTML</option>
+          <option value="CSS">CSS</option>
+          <option value="JavaScript">JavaScript</option>
+        </select>
+        <br />
+        <button id="insert-button">Post erstellen</button>
+      </form>
+
+      <span>________________________________________________________________________________</span>
+      <h1 id="blog">Blog</h1>
+      <section id="output-post"></section>
+    </section>
+  </body>
+</html>
