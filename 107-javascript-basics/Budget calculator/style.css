@@ -1,0 +1,96 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  background-color: lightgrey;
+}
+
+header {
+  text-align: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  /* background-color: aqua; */
+  width: 80vw;
+  margin: 0px auto;
+}
+
+.input-box {
+  height: 30px;
+  width: 100%;
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px lightslategrey;
+  margin: 10px 0 30px 0;
+}
+
+.btn {
+  padding: 10px 15px;
+  border: 0;
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+}
+
+#colorpicker {
+  margin-bottom: 30px;
+}
+
+.toast-msg {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1rem;
+  width: fit-content;
+  height: fit-content;
+  z-index: 99;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: grid;
+  justify-content: start;
+  background-color: white;
+  padding: 10px;
+  opacity: 0;
+}
+
+.visible {
+  animation: fadeInRight 500ms;
+  opacity: 1;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.success {
+  border-left: green 5px solid;
+}
+
+.error {
+  border-left: red 5px solid;
+}
+
+.warning {
+  border-left: orange 5px solid;
+}
+
+.info {
+  border-left: lightskyblue 5px solid;
+}
+.toast-msg h4 {
+  margin: 0;
+}
+.toast-msg p {
+  margin: 0;
+}
