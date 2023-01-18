@@ -1,0 +1,85 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  /* background-color: lightgrey; */
+}
+
+/* main {
+  display: flex;
+  flex-direction: row;
+  background-color: aqua;
+  width: 80vw;
+  margin: 0px auto;
+} */
+
+#container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+.box {
+  padding: 20px 10px;
+  /* border: 2px solid grey; */
+  background-color: rgba(211, 211, 211, 0.527);
+  /* margin-bottom: 50px; */
+}
+
+.search-box {
+  min-height: 30px;
+  min-width: 10%;
+  border: 1px solid lightslategray;
+  border-radius: 5px;
+  box-shadow: 3px 3px 3px lightslategrey;
+  margin: 10px 0 30px 0;
+}
+
+.btn {
+  padding: 8px 15px;
+  border: 0;
+  background-color: darkblue;
+  color: white;
+  border-radius: 5px;
+}
+
+.post {
+  padding: 30px 50px;
+  border: 2px solid grey;
+  margin: 20px 0;
+  box-shadow: 3px 3px 3px lightslategrey;
+}
+
+#products-container {
+  padding: 0px;
+  margin: 0;
+  overflow-y: scroll;
+  height: 700px;
+}
+
+li {
+  list-style-type: none;
+  margin-bottom: 10px;
+  display: flex;
+  gap: 10px;
+}
+
+#product-box {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-img {
+  width: 70px;
+  height: 70px;
+}
+
+.product-images {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+}

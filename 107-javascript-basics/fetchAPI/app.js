@@ -1,6 +1,6 @@
 const postsContainer = document.getElementById("posts-container");
 const fetchBtn = document.getElementById("fetch-btn");
-fetchBtn.addEventListener("click", fetchPosts);
+fetchBtn.addEventListener("click", fetchPostsWithFetchAPI);
 
 // const xmlhttp = new XMLHttpRequest();
 // xmlhttp.open("GET", "https://jsonplaceholder.typicode.com/posts");
@@ -34,9 +34,13 @@ function sendHttpRequest(method, url, post) {
     xmlhttp.send(JSON.stringify(post));
   });
   return myPromise;
+  // return fetch(url, {
+  //   method: method,
+  //   body: JSON.stringify(data)
+  // }
 }
 
-async function fetchPosts() {
+async function fetchPostsWithAsyncFunction() {
   const responseData = await sendHttpRequest("GET", "https://jsonplaceholder.typicode.com/posts");
   responseData.forEach((post) => {
     console.log(post);
@@ -50,6 +54,25 @@ async function fetchPosts() {
     postBox.append(text);
     postsContainer.append(postBox);
   });
+}
+
+function fetchPostsWithFetchAPI() {
+  fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((data) => {
+      data.forEach((post) => {
+        console.log(post);
+        let postBox = document.createElement("div");
+        postBox.setAttribute("class", "post");
+        let header = document.createElement("h1");
+        header.innerText = post.title.toUpperCase();
+        let text = document.createElement("p");
+        text.innerText = post.body;
+        postBox.append(header);
+        postBox.append(text);
+        postsContainer.append(postBox);
+      });
+    });
 }
 
 function createPost(title, content) {

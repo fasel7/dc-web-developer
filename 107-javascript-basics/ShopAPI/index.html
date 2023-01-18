@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="app.js" defer></script>
+    <title>Online Shop</title>
+  </head>
+  <body>
+    <header><h1>Online-Shop</h1></header>
+    <main>
+      <section>
+        <div>
+          <form id="insert-form">
+            <input type="text" id="title-input" class="search-box" value="Search" /><br />
+
+            <select class="search-box">
+              <option value="All">All</option>
+              <option value="saab">Saab</option>
+              <option value="fiat">Fiat</option>
+              <option value="audi">Audi</option>
+            </select>
+
+            <button id="filter-btn" class="btn">filter</button>
+          </form>
+        </div>
+        <h2>Products()</h2>
+        <section id="container">
+          <ul id="products-container"></ul>
+          <div id="product-box" class="box">
+            <h3 id="product-title">iPhone</h3>
+            <span id="product-category">Smartphone</span>
+            <div id="product-images"><img src="test.jpg" alt="test" /></div>
+            <span id="product-price">2342</span>
+            <span id="available-products">Noch 121 auf Lager</span>
+            <span id="description">SIM_Free</span>
+          </div>
+        </section>
+      </section>
+    </main>
+  </body>
+</html>
