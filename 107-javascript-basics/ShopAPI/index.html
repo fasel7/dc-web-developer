@@ -13,29 +13,29 @@
     <main>
       <section>
         <div>
-          <form id="insert-form">
-            <input type="text" id="title-input" class="search-box" value="Search" /><br />
+          <input type="text" id="search-input" class="search-box" /><br />
 
-            <select class="search-box">
-              <option value="All">All</option>
-              <option value="saab">Saab</option>
-              <option value="fiat">Fiat</option>
-              <option value="audi">Audi</option>
-            </select>
+          <select class="filter-box">
+            <option value="All">All</option>
+          </select>
 
-            <button id="filter-btn" class="btn">filter</button>
-          </form>
+          <button id="filter-btn" class="btn">filter</button>
         </div>
         <h2>Products()</h2>
         <section id="container">
           <ul id="products-container"></ul>
           <div id="product-box" class="box">
-            <h3 id="product-title">iPhone</h3>
-            <span id="product-category">Smartphone</span>
-            <div id="product-images"><img src="test.jpg" alt="test" /></div>
-            <span id="product-price">2342</span>
-            <span id="available-products">Noch 121 auf Lager</span>
-            <span id="description">SIM_Free</span>
+            <h3 id="product-title"></h3>
+            <p id="product-category"></p>
+            <div id="product-images"></div>
+            <p>
+              <span id="product-price"></span>
+              <span id="discount-price"></span>
+              <span id="discount-percentage"></span>
+            </p>
+
+            <p id="available-products"></p>
+            <p id="description"></p>
           </div>
         </section>
       </section>
