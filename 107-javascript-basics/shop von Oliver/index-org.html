@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <script type="module" src="app.js"></script>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #produktliste {
+            float: left;
+            width: 24%;
+            padding:36px 16px;
+        }
+
+        #produktdetail {
+            float: left;
+            width: 60%;
+            height: 60vh;
+            padding: 30px;
+            border-left: 1px solid black;
+        }
+
+        #warenkorb {
+            position: fixed;
+            right: 0;
+            top:40px;
+            width: 200px;
+            min-height: 100px;
+            padding: 10px 10px 70px;
+            background-color: blanchedalmond;
+        }
+
+        #warenkorb .item {
+            border-bottom: 1px solid black;
+            padding: 10px 0;
+        }
+
+        #warenkorb h4, #warenkorb p {
+            display: inline;
+        }
+
+        #warenkorb input {
+            width: 20%;
+            float: right;
+        }
+
+        #warenkorb button {
+            float: right;
+        }
+
+        #cart-total {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        #item-template {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="produktliste">
+        <h2>Produkte</h2>
+    </div>
+    <div id="produktdetail">
+        <h1>Produkt</h1>
+    </div>
+    <div id="warenkorb">
+        <h3>Warenkorb</h3>
+        <div id="item-template" class="item">
+            <h4>Titel</h4>
+            <p>€ 10</p>
+            <button>x</button>
+            <input/>
+        </div>
+        <div id="cart-total">
+            <div id="cart-qty">0 Produkte</div>
+            <div id="cart-sum">0 Euro</div>
+        </div>
+    </div>
+<script>
+    const Shirt = new Product(1400, 'Shirt', 30);
+    Shirt.colors = ['red', 'green', 'black'];
+    const Pants = new Product(1500, 'Pants', 70);
+    Pants.sizes = [29, 30, 31];
+
+    const productList = [
+        new Product(1600, 'Socks', 10),
+        Pants,
+        Shirt
+    ];
+
+    const shoppingCart = cart();
+    const cartElement = document.getElementById('warenkorb');
+    const cartHtml = new CartDOM('warenkorb', {
+        addedProduct: function () {
+            cartElement.querySelectorAll('input').forEach(element => {
+                element.addEventListener('change', changedProduct);
+            });
+            cartElement.querySelectorAll('button').forEach(element => {
+                element.addEventListener('click', removedProduct);
+            });
+        }
+    });
+
+    function changedProduct(event) {
+        const productElement = event.target;
+        const productId = productElement.parentNode.getAttribute('data-id');
+        const newAmount = productElement.value;
+
+        if (newAmount == 0) {
+            removedProduct(event);
+        } else {
+            shoppingCart.updateQuantity(productId, newAmount);
+            cartHtml.updateProductPrice(productId, shoppingCart.getPrice(productId));
+            cartHtml.updateSum(shoppingCart.getTotal());
+        }
+    }
+
+    function removedProduct(event) {
+        console.log(event);
+        const productElement = event.target;
+        productElement.parentNode.remove();
+
+        shoppingCart.removeFromCart(productElement.parentNode.getAttribute('data-id'));
+        cartHtml.updateTotal(shoppingCart.getCount(), shoppingCart.getTotal());
+    }
+
+    // add product shirt -----------
+    let product = {
+        ...productList[0],
+        attributes: {
+            color: 'red',
+            size: 'M'
+        }
+    };
+    shoppingCart.addToCart(product.id, product.price, product.attributes);
+    cartHtml.addProduct(product);
+
+    // add product pants -----------
+    product = {
+        ...productList[1],
+        attributes: {
+            color: 'black',
+            size: 'L'
+        }
+    };
+
+    shoppingCart.addToCart(product.id, product.price, product.attributes);
+    cartHtml.addProduct(product);
+
+    // increase amount to 3
+    //shoppingCart.updateQuantity(product.id, 3);
+
+
+    // add product sock -----------
+    product = productList[2];
+
+    shoppingCart.addToCart(product.id, product.price);
+    cartHtml.addProduct(product);
+
+    // update total
+    cartHtml.updateTotal(shoppingCart.getCount(), shoppingCart.getTotal());
+
+
+    /*/ re-add socks -----------
+    shoppingCart.addToCart(product.id, product.price);
+
+    console.log(
+        'count: ' + shoppingCart.getCount(),
+        'total: ' + shoppingCart.getTotal()
+    );
+
+    // remove product shirt -----------
+    shoppingCart.removeFromCart(1400);
+    cartHtml.updateTotal(shoppingCart.getCount(), shoppingCart.getTotal());
+
+    console.log(
+        'count: ' + shoppingCart.getCount(),
+        'total: ' + shoppingCart.getTotal()
+    );
+    console.log(shoppingCart.checkout());
+     */
+
+
+    /*/ private properties
+    console.log('Product.internerWert', Shirt.privateObjectKey, Shirt.getObjectKey());
+    console.log('cart.internerWert', shoppingCart.privateObjectKey, shoppingCart.getObjectKey());
+    console.log('CartDOM.internerWert', cartHtml.privateObjectKey, cartHtml.getObjectKey());
+    Shirt.privateObjectKey = 123;
+    shoppingCart.privateObjectKey = 123;
+    cartHtml.privateObjectKey = 123;
+    console.log('Product.internerWert', Shirt.privateObjectKey, Shirt.getObjectKey());
+    console.log('cart.internerWert', shoppingCart.privateObjectKey, shoppingCart.getObjectKey());
+    console.log('CartDOM.internerWert', cartHtml.privateObjectKey, cartHtml.getObjectKey());
+    console.log('Shirt', Shirt);
+    console.log('shoppingCart', shoppingCart);
+    console.log('CartDOM', cartHtml);
+    // end */
+</script>
+</body>
+</html>

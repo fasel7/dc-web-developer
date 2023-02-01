@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-color: rgba(26, 221, 62, 0.224);
+}
+
+main {
+  margin: 0 auto;
+  width: 400px;
+}
+
+#choose-name {
+  display: none;
+}
+
+#playername-field {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 10px;
+  padding: 20px;
+}
+
+.playername {
+  background-color: rgba(26, 221, 62, 0.313);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.edit-name-btn {
+  background: none;
+  border: 0;
+  text-decoration: underline;
+}
+
+#new-game-btn {
+  background-color: rgba(26, 221, 62, 0.721);
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
+}
+
+#game-container {
+  display: none;
+}
+
+#game-board {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  height: 400px;
+}
+
+.board-box {
+  background-color: rgba(26, 221, 62, 0.523);
+  border: 0;
+  border-radius: 5px;
+  width: 125px;
+  height: 125px;
+  font-size: 6em;
+}

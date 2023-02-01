@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./script.js" defer></script>
+    <script src="./players.js" defer></script>
+    <script src="./game.js" defer></script>
+    <script src="./variables.js" defer></script>
+    <title>TicTacToe</title>
+  </head>
+  <body>
+    <header><h1>Tic - Tac - Toe</h1></header>
+    <main>
+      <div id="choose-name">
+        <h3>Choose your name</h3>
+        <input type="text" placeholder="name" />
+        <button id="confirm-btn">confirm</button>
+        <button id="cancel-btn">cancel</button>
+      </div>
+      <section id="playername-field">
+        <div id="player1" class="playername">
+          <span>Player 1</span>
+          <h3 id="player1-name">PLAYER NAME</h3>
+          <p>X</p>
+          <button class="edit-name-btn">edit</button>
+        </div>
+        <div id="player2" class="playername">
+          <span>Player 2</span>
+          <h3 id="player2-name">PLAYER NAME</h3>
+          <p>O</p>
+          <button class="edit-name-btn">edit</button>
+        </div>
+      </section>
+      <button id="new-game-btn">start new game</button>
+      <section id="game-container">
+        <p>It's your turn <span id="players-turn">PLAYER NAME</span></p>
+        <div id="game-board">
+          <button id="box1" class="board-box"></button>
+          <button id="box2" class="board-box"></button>
+          <button id="box3" class="board-box"></button>
+          <button id="box4" class="board-box"></button>
+          <button id="box5" class="board-box"></button>
+          <button id="box6" class="board-box"></button>
+          <button id="box7" class="board-box"></button>
+          <button id="box8" class="board-box"></button>
+          <button id="box9" class="board-box"></button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
