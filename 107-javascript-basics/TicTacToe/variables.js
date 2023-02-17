@@ -18,7 +18,7 @@ const playersTurn = document.getElementById("players-turn");
 const gameBoard = document.getElementById("game-board");
 gameBoard.addEventListener("click", markedField);
 
-let current = 0;
+let currentPlayer = 0;
 const players = ["Х", "Ο"];
 let filledFields = [];
 let emptyFields = [0, 1, 2, 3, 4, 5, 6, 7, 8];

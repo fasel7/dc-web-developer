@@ -22,7 +22,6 @@ function cancelPlayerName() {
 }
 
 function witchPlayersTurn() {
-  console.log(player1Name.innerText);
   if (playersTurn.innerText === player1Name.innerText) {
     playersTurn.innerText = player2Name.innerText;
   } else {

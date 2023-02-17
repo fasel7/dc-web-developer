@@ -19,6 +19,31 @@ main {
 
 #choose-name {
   display: none;
+  position: absolute;
+
+  width: 400px;
+  height: 300px;
+  background-color: rgb(129, 217, 145);
+  border-radius: 15px;
+
+  padding: 55px 20px;
+}
+
+input {
+  border: 0;
+  border-radius: 10px;
+  padding: 10px;
+  width: 80%;
+}
+
+.btn {
+  border: 0;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 25px 10px;
+  background-color: green;
+  color: white;
+  font-size: large;
 }
 
 #playername-field {
@@ -49,7 +74,7 @@ main {
 }
 
 #game-container {
-  display: none;
+  /* display: none; */
 }
 
 #game-board {
