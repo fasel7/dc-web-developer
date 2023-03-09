@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>es6</title>
+  </head>
+  <body>
+    <h1>ES6</h1>
+    <script type="module">
+      // modules
+      export var num = 50;
+      export function getName(fullName) {
+        //data
+      }
+
+      // import {num, getName} from 'module';
+      // console.log(num); // 50
+    </script>
+    <script>
+      // let const
+      let me = "say";
+      const antly = "be";
+
+      // arrow functions
+      let sumOfTwoNumbers = (a, b) => a + b;
+      console.log(sumOfTwoNumbers(10, 20));
+
+      // multi line
+      let greeting = `Hello World,
+                Greetings to all,
+                Keep Learning and Practicing!`;
+      console.log(greeting);
+
+      // parameters default values --------
+      let calculateArea = function (height = 100, width = 50) {
+        console.log(height, width);
+      };
+      calculateArea();
+      calculateArea(10, 10);
+
+      // template literals ------
+      let firstName = "slim";
+      let lastName = "shady";
+      let hi = `My name is ${firstName} ${lastName}`;
+      console.log(hi);
+      firstName = "fatboy";
+      lastName = "slim";
+      console.log(hi);
+
+      function map(long, lat) {
+        return `My location ist is ${long} ${lat}`;
+      }
+
+      // destructuring -------------
+
+      // array
+      let fruits = ["Apple", "Banana", "Peaches"];
+      let [a, c] = fruits; // Array destructuring assignment
+      console.log(a, c);
+
+      // object
+      let person = { name: "Peter", age: 28, birthYear: 2000 };
+      let { name, birthYear } = person; // Object destructuring assignment
+      console.log(name, birthYear);
+
+      // function getCoordinates() {
+      //     // query
+      //     return {long, z, lat}
+      // }
+      // let {lat} = getCoordinates()
+
+      // ... operator ------------------
+
+      // array
+      const q1 = ["Jan", "Feb", "Mar"];
+      const q2 = ["Apr", "May", "Jun"];
+      const q3 = ["Jul", "Aug", "Sep"];
+      const q4 = ["Oct", "Nov", "May"];
+
+      const year0 = [...q1, ...q2, ...q3, ...q4];
+
+      // object
+      let extendedPerson = {
+        ...person,
+        birthYear: "yesterday",
+      };
+      console.log(extendedPerson, person);
+
+      // for of ------------------
+      for (let month of year0) {
+        console.log(month);
+      }
+      for (let char of name) {
+        console.log(char);
+      }
+
+      // map -------------------
+      // Create a Map
+      let fruechte = new Map();
+
+      // Set Map Values
+      fruechte.set("apples", 500);
+      fruechte.set("bananas", 300);
+      fruechte.set("oranges", 200);
+      console.log(fruechte);
+      console.log("verschiedene fruechte: " + fruechte.size);
+
+      fruechte.set("apples", 100);
+      console.log(fruechte.get("apples"));
+      fruechte.delete("apples");
+      console.log(fruechte.has("apples"));
+      console.log(fruechte);
+
+      console.log(typeof fruits);
+      console.log(fruits instanceof Map);
+
+      for (let amount of fruechte) {
+        console.log(amount);
+      }
+      for (let amount of fruechte.entries()) {
+        console.log(amount);
+      }
+      for (let amount of fruechte.keys()) {
+        console.log(amount);
+      }
+      for (let amount of fruechte.values()) {
+        console.log(amount);
+      }
+
+      fruechte.clear();
+      console.log(fruechte);
+
+      fruechte = new Map([
+        ["apples", 500],
+        ["bananas", 300],
+        ["oranges", 200],
+      ]);
+      console.log(fruechte);
+
+      // Create Objects
+      const apples = { name: "Apples" };
+      const bananas = { name: "Bananas" };
+      const oranges = { name: "Oranges" };
+
+      // Create a Map
+      const fruitsObjAsKeys = new Map();
+
+      // Add new Elements to the Map
+      fruitsObjAsKeys.set(apples, 500);
+      fruitsObjAsKeys.set(bananas, 300);
+      fruitsObjAsKeys.set(oranges, 200);
+      console.log(fruitsObjAsKeys);
+
+      // short object literals --------------
+      function getMobile({ manufacturer, model, year }) {
+        console.log(manufacturer, model, year);
+
+        return {
+          manufacturer,
+          model,
+          year,
+        };
+      }
+      const manufacturer = "Samsung";
+      const model = "A";
+      const year = 2001;
+      console.log(getMobile({ manufacturer, year }));
+
+      // sets -----------
+      // Create a Set
+      const letters = new Set(["a", "b", "c"]);
+      letters.add("b");
+      letters.add("d");
+      console.log(letters);
+      console.log(typeof letters);
+
+      // List all entries
+      letters.forEach(function (value) {
+        console.log(value);
+      });
+      for (let obj of letters.entries()) {
+        console.log(obj);
+      }
+      for (let obj of letters.keys()) {
+        console.log(obj);
+      }
+      for (let obj of letters.values()) {
+        console.log(obj);
+      }
+
+      // promise ----------
+      console.log("code before promise");
+      var asyncCall = new Promise((resolve, reject) => {
+        // do something
+        resolve();
+      }).then(() => {
+        console.log("resolved!");
+      });
+      console.log("code after promise");
+
+      // class ------------
+      class UserProfile {
+        constructor(firstName, lastName) {
+          this.firstName = firstName;
+          this.lastName = lastName;
+        }
+
+        getName() {
+          console.log(`The Full-Name is ${this.firstName} ${this.lastName}`);
+        }
+      }
+      let obj = new UserProfile("John", "Smith");
+      obj.getName();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.todo-item {
+  background-color: lightblue;
+  display: flex;
+  padding: 40px;
+}
+
+.isCompleted {
+  width: 60px;
+  display: flex;
+  align-items: center;
+}

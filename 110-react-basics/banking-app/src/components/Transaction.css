@@ -1,0 +1,17 @@
+.transaction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.transaction-name {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.category-name,
+.transaction-title {
+  margin: 0;
+}

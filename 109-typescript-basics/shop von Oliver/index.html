@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop</title>
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #produktliste {
+            float: left;
+            width: 24%;
+            padding:36px 16px;
+        }
+
+        #produktdetail {
+            float: left;
+            width: 60%;
+            height: 60vh;
+            padding: 30px;
+            border-left: 1px solid black;
+        }
+
+        #warenkorb {
+            position: fixed;
+            right: 0;
+            top:40px;
+            width: 240px;
+            min-height: 100px;
+            padding: 10px 10px 70px;
+            background-color: blanchedalmond;
+        }
+
+        #warenkorb .item {
+            border-bottom: 1px solid black;
+            padding: 10px 0;
+        }
+
+        #warenkorb h4, #warenkorb p {
+            display: inline;
+        }
+
+        #warenkorb input {
+            width: 20%;
+            float: right;
+        }
+
+        #warenkorb button {
+            float: right;
+        }
+
+        #cart-total {
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+        }
+
+        #item-template {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="produktliste">
+        <h2>Produkte</h2>
+    </div>
+<!--    <div id="produktdetail">-->
+<!--        <h1>Produkt</h1>-->
+<!--    </div>-->
+    <div id="warenkorb">
+        <h3>Warenkorb</h3>
+        <div id="item-template" class="item">
+            <h4>Titel</h4>
+            <p>€ 10</p>
+            <button>x</button>
+            <input/>
+        </div>
+        <div id="cart-total">
+            <div id="cart-qty">0 Produkte</div>
+            <div id="cart-sum">0 Euro</div>
+        </div>
+    </div>
+    <script type="module" src="app.js"></script>
+</body>
+</html>

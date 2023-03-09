@@ -1,0 +1,21 @@
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 10px;
+  padding: 5px;
+  background-color: azure;
+}
+
+.expense-box {
+  display: flex;
+  align-items: center;
+}
+
+span {
+  background-color: red;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  color: aliceblue;
+}

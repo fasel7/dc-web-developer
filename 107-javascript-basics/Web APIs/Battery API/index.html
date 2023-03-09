@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Battery API Example</title>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <button id="pip-button">Picture-in-Picture</button>
+    <video width="640" height="360" controls src="http://videos-cdn.mozilla.net/serv/webmademovies/Moz_Doc_0329_GetInvolved_ST.webm"></video>
+  </body>
+  <script>
+    const video = document.querySelector("video");
+    const pipButton = document.getElementById("pip-button");
+
+    pipButton.addEventListener("click", async () => {
+      try {
+        await video.requestPictureInPicture();
+      } catch (error) {
+        // Handle error
+      }
+    });
+
+    navigator.getBattery().then((battery) => {
+      function updateAllBatteryInfo() {
+        updateChargeInfo();
+        updateLevelInfo();
+        updateChargingInfo();
+        updateDischargingInfo();
+      }
+      updateAllBatteryInfo();
+
+      battery.addEventListener("chargingchange", () => {
+        updateChargeInfo();
+      });
+      function updateChargeInfo() {
+        console.log(`Battery charging? ${battery.charging ? "Yes" : "No"}`);
+      }
+
+      battery.addEventListener("levelchange", () => {
+        updateLevelInfo();
+      });
+      function updateLevelInfo() {
+        console.log(`Battery level: ${battery.level * 100}%`);
+      }
+
+      battery.addEventListener("chargingtimechange", () => {
+        updateChargingInfo();
+      });
+      function updateChargingInfo() {
+        console.log(`Battery charging time: ${battery.chargingTime} seconds`);
+      }
+
+      battery.addEventListener("dischargingtimechange", () => {
+        updateDischargingInfo();
+      });
+      function updateDischargingInfo() {
+        console.log(`Battery discharging time: ${battery.dischargingTime} seconds`);
+      }
+    });
+  </script>
+</html>
