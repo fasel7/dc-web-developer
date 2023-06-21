@@ -1,0 +1,27 @@
+@import "../../index.css";
+
+.quantity {
+  width: 40px;
+  font-family: "PaperCute";
+  margin-left: 5px;
+}
+
+.add-btn {
+  width: 100%;
+  font-family: "PaperCute";
+  background-color: #edcd00;
+  color: white;
+  border: 0;
+  border-radius: 15px;
+  margin-top: 5px;
+  padding: 5px;
+}
+
+.add-btn:hover {
+  background-color: #a79000;
+  cursor: pointer;
+}
+
+.add-to-cart-box {
+  width: 150px;
+}

@@ -1,0 +1,25 @@
+@import "../../index.css";
+
+.card {
+  border-radius: 15px;
+}
+
+.header-card {
+  padding: 10px;
+  margin: 0px auto;
+  width: 50%;
+  text-align: center;
+  margin-top: -100px;
+  background-color: black;
+  position: relative;
+}
+
+.header-card h1 {
+  color: #edcd00;
+  font-family: "ThirstyRough";
+}
+
+.header-card h5 {
+  color: white;
+  font-family: "PaperCute";
+}

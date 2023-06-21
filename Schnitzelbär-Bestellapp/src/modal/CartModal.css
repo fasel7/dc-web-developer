@@ -1,0 +1,57 @@
+@import "../index.css";
+
+.cart-box {
+  background-color: white;
+  border-radius: 15px;
+  font-family: "PaperCute";
+  padding: 20px;
+  position: absolute;
+  top: 30%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+  /* display: none; */
+}
+
+.total-amount {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btn-box {
+  display: flex;
+  justify-content: right;
+  gap: 10px;
+}
+
+.btn-box button {
+  font-family: "PaperCute";
+  border-radius: 30px;
+  padding: 7px 20px;
+  font-size: larger;
+}
+
+.close-btn {
+  background-color: white;
+  border: 2px solid #edcd00;
+  color: #edcd00;
+}
+
+.close-btn:hover {
+  border: 2px solid #a79000;
+  color: #a79000;
+  cursor: pointer;
+}
+
+.order-btn {
+  background-color: #edcd00;
+  border: 0;
+  color: white;
+}
+
+.order-btn:hover {
+  background-color: #a79000;
+  cursor: pointer;
+}

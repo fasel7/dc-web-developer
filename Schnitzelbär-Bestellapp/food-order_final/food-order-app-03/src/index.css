@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'PaperCuteBold', sans-serif;
+}
+
+@font-face {
+  font-family: 'PaperCuteBold';
+  src: local('PaperCuteBold'), url(./fonts/PaperCuteBold.woff2) format('woff2');
+}
+@font-face {
+  font-family: 'ThirstyRough';
+  src: local('ThirstyRough'), url(./fonts/ThirstyRough.woff2) format('woff2');
+}
+
+body {
+  margin: 0;
+  background-color: black;
+}

@@ -1,0 +1,24 @@
+@import "../../index.css";
+
+.menu-item {
+  font-family: "PaperCute";
+  list-style-type: none;
+  /* padding: 20px 10px; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-name h6,
+.menu-name h4 {
+  margin: 0;
+}
+
+.menu-name span {
+  color: #edcd00;
+}
+
+hr {
+  width: 100%;
+  margin: 12px 0;
+}

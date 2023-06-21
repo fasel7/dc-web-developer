@@ -1,0 +1,24 @@
+.meal {
+  display: flex;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  margin: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #ccc;
+}
+
+.meal h3 {
+  margin: 0 0 0.25rem 0;
+}
+
+.description {
+  font-style: italic;
+  font-size: 1rem;
+}
+
+.price {
+  margin-top: 0.25rem;
+  font-weight: bold;
+  color: #edcd00;
+  font-size: 1.5rem;
+}
