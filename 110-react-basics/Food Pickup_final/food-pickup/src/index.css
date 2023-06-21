@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gant';
+  src: url('./fonts/gant.ttf');
+  font-weight: 800;
+  font-display: swap;
+}
+
+:root {
+  --main-color: #aab4a5;
+}
+
+html,
+#root,
+.App,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: var(--main-color);
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+h2 {
+  font-family: 'Gant';
+}

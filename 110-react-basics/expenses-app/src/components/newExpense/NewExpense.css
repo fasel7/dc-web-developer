@@ -1,0 +1,10 @@
+.expense-form-box {
+  width: 70%;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: grey;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}

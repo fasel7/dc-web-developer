@@ -1,0 +1,9 @@
+.new-order-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  background-color: white;
+  padding: 10px 40px 20px 40px;
+  border-radius: 5px;
+}
